@@ -1,10 +1,9 @@
 from databases import Database
+from dotenv import load_dotenv
+import os
 
-SUPABASE_DB_URL = "postgresql://username:password@db.XXXXX.supabase.co:5432/postgres"
+load_dotenv()
 
-database = Database(SUPABASE_DB_URL)
-
-
-
-
+DATABASE_URL = os.getenv("DATABASE_URL")
+database = Database(DATABASE_URL)
 

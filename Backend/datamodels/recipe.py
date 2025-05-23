@@ -1,10 +1,9 @@
 from pydantic import BaseModel
 from materials import Material
-
+from typing import List, Optional
 class Recipe(BaseModel):
-    steps:list[str] = None
-    materials:list[Material] = None
-    Price: list[int] = None
-    time: list[str]
-    totaltime: str
-    
+    steps: Optional[List[str]] = None
+    materials: Optional[List[Material]] = None
+    price: Optional[List[float]] = None 
+    time: Optional[List[str]] = None
+    totaltime: Optional[str] = None

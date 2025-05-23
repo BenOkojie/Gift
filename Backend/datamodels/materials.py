@@ -1,10 +1,8 @@
 from pydantic import BaseModel
-
+from typing import Optional
 
 class Material(BaseModel):
-    name:str = None
-    quantity:int = None
-    unit: str = None
-    price: int
-
-    
+    name: Optional[str] = None
+    quantity: Optional[int] = None
+    unit: Optional[str] = None
+    price: Optional[float] = None

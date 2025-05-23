@@ -10,7 +10,7 @@ giftees = Table(
     "giftees",
     metadata,
     Column("id", Integer, primary_key=True),
-    Column("user_id", String, nullable=False),       # Supabase Auth user ID
+    Column("user_id", String, nullable=False), 
     Column("name", String, nullable=False),
     Column("birthdate", Date),                      
     Column("hobbies", ARRAY(String)),                
@@ -73,5 +73,5 @@ gifts = Table(
     Column("isevent", Boolean),
     Column("isdiy", Boolean),
     Column("recipe_id", Integer, ForeignKey("recipes.id", ondelete="SET NULL")),
-    Column("event_id", Integer, ForeignKey("events.id", ondelete="SET NULL"))
+    Column("event_id", Integer, ForeignKey("events.id", ondelete="SET NULL")),
 )

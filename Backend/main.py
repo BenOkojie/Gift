@@ -3,8 +3,11 @@ from pydantic import BaseModel
 from fastapi.middleware.cors import CORSMiddleware
 from routes import giftees
 from database.db import database
+from routes import gemini  # or whatever you named the file
+
 
 app = FastAPI()
+app.include_router(gemini.router)
 app.include_router(giftees.router)
 @app.on_event("startup")
 async def startup():

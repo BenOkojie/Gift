@@ -85,7 +85,7 @@ export default function Home() {
         {filteredGiftees.length > 0 ? (
        filteredGiftees.map((g) => (
         <li key={g.id} style={{ marginBottom: 10 }}>
-            <Link to={`/giftee/${g.id}`}>
+            <Link to={`/giftee/${g.id}`} state={{ giftee: g }}>
             <strong>{g.name}</strong>
             </Link>
             <br />
